@@ -175,8 +175,9 @@ ${description}
     console.error("Backend error:", error);
 
     res.status(500).json({
-      error: "Failed to analyze intake",
-      details: error.message,
+        error: "Failed to analyze intake",
+        details: error.message,
+        hint: "Check GROQ_API_KEY environment variable on Render",
     });
   }
 });
