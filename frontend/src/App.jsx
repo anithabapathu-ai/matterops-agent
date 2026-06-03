@@ -94,7 +94,7 @@ function App() {
     setReviewStatus("Pending Review");
 
     try {
-      const response = await axios.post("http://localhost:5000/api/analyze", form);
+      const response = await axios.post("/api/analyze", form);
       setResult(response.data);
 
       setMatterHistory((prev) => [
